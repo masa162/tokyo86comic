@@ -9,7 +9,7 @@ async function get<T>(path: string): Promise<T> {
 }
 
 export const batchesApi = {
-  list: () => get<ApiResponse<Batch[]>>('/api/batches'),
+  list: () => get<ApiResponse<Batch[]>>('/api/batches?purpose=toon'),
   get: (batchId: string) => get<ApiResponse<BatchWithImages>>(`/api/batches/${batchId}`),
 };
 
